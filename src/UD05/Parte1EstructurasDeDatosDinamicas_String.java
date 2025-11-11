@@ -8,13 +8,79 @@ import java.util.Scanner;
 public class Parte1EstructurasDeDatosDinamicas_String {
 
     /*
-    Se quieren hacer una serie de comprobaciones en una frase. Realízalas y muestra el resultado.
+    Una aplicación de acceso necesita validar nombres de usuario según normas específicas. Además, quiere ayudar a los usuarios a corregir errores comunes.
 
-    a) Introduce una frase y guárdala. Indica si empieza por mayúscula y acaba por punto. Si no es el caso, modifica la cadena.
-    b) Muestra la longitud de la frase y cuántas palabras contiene (asumiendo que están separadas por espacios en blanco).
-    c) Sustituye todas las apariciones de la palabra "Java" por "Python".
-    d) Muestra la frase final resultante, la longitud y el número de palabras.
+    a) Guarda 5 nombres de usuario. Muéstralos.
+    b) Muestra cuáles son válidos: empiezan con letra, tienen entre 5 y 12 caracteres, no contienen espacios.
+    c) Para aquellos que no sean válidos, sugiere una versión corregida (elimina espacios, cambia el carácter inicial si es un dígito, recorta o completa longitudes).
+    d) Añade una nueva condición: todos los caracteres tienen que ser alfanuméricos. Modifica también el código para añadir sugerencia en caso de no superar esta nueva comprobación.
      */
+
+
+    /*
+    Una aplicación ha recibido una lista de correos electrónicos que hay que validar y analizar.
+
+    a) Guarda 5 correos en un vector de String. Muéstralos.
+    b) Muestra cuáles contienen el símbolo "@" y acaban en ".com" o ".es".
+    c) Muestra el dominio de cada correo (usa substring, indexOf).
+     */
+
+    public static void EjercicioS4() {
+        Scanner scanner = new Scanner(System.in);
+        int contadorCorreosElectronicos = 5;
+        String[] correosElectronicos = new String[5];
+
+        String[] correosConArroba = new String[5];
+        String[] correosConPuntoComPuntoEs = new String[5];
+        String[] correosPuntoCom = new String[5];
+        int index = 0;
+        do {
+            System.out.println("Ingrese un correo electrónico a validar: ");
+            System.out.println("En total son 5, quedan: " + contadorCorreosElectronicos);
+            correosElectronicos[index] = scanner.nextLine();
+            index++;
+            contadorCorreosElectronicos -= 1;
+        } while (contadorCorreosElectronicos > 0);
+        System.out.println("Los correos electrónicos ingresados son: " + Arrays.toString(correosElectronicos).replace("[", "").replace("]", "").toLowerCase());
+        for (int i = 0; i < correosElectronicos.length; i++) {
+            if (correosElectronicos[i].contains("@")) {
+                correosConArroba[i] = correosElectronicos[i];
+            }
+            if (correosElectronicos[i].contains(".com")) {
+                correosPuntoCom[i] = correosElectronicos[i];
+            }
+            if (correosElectronicos[i].contains(".es")) {
+                correosConPuntoComPuntoEs[i] = correosElectronicos[i];
+            }
+        }
+
+        System.out.println("Los correos que tienen arroba son: "+ formatear(correosConArroba));
+        System.out.println("Los correos que tienen .com son: "+ formatear(correosPuntoCom));
+        System.out.println("Los correos que tienen .es son: "+ formatear(correosConPuntoComPuntoEs));
+        for (String correo : correosElectronicos) {
+            if (correo.contains(".")) {
+                String dominio = correo.substring(correo.indexOf("."));
+                System.out.println("El dominio de: " + correo + " es: " + dominio);
+            } else {
+                System.out.println("El correo siguiente no tiene dominio: " + correo);
+            }
+
+        }
+
+    }
+
+    private static String formatear(String[] texto) {
+        return Arrays.toString(texto).replace("[", "").replace("]", "").replace(" null,", "").replace(", null", "").replace("null,", "");
+    }
+
+    /*
+        Se quieren hacer una serie de comprobaciones en una frase. Realízalas y muestra el resultado.
+
+        a) Introduce una frase y guárdala. Indica si empieza por mayúscula y acaba por punto. Si no es el caso, modifica la cadena.
+        b) Muestra la longitud de la frase y cuántas palabras contiene (asumiendo que están separadas por espacios en blanco).
+        c) Sustituye todas las apariciones de la palabra "Java" por "Python".
+        d) Muestra la frase final resultante, la longitud y el número de palabras.
+         */
     public static void EjercicioS3() {
         Scanner scanner = new Scanner(System.in);
         String frase = "";
@@ -41,7 +107,7 @@ public class Parte1EstructurasDeDatosDinamicas_String {
             }
         }
         System.out.println("Como queremos más Java te lo cambiamos por python");
-        frase =frase.replace("Java", "Python");
+        frase = frase.replace("Java", "Python");
         System.out.println("La frase tiene estas palabras: " + contadorPalabras);
         System.out.println(frase);
     }
