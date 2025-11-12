@@ -18,24 +18,25 @@ public class Parte1EstructurasDeDatosDinamicas_String {
      */
     public static void EjercicioS5() {
         Scanner scanner = new Scanner(System.in);
-//        String[] usuarios = new String[5];
-        String[] usuarios = {"pet", "-Catarate", "paralel-pipedo", "1terratremol", "pa tata"};
+    String[] usuarios = new String[5];
+    //    String[] usuarios = {"pet", "-Catarate", "paralel-pipedo", "1terratremol", "pa tata"};
         String[] usuariosValidados = new String[5];
         String[] usuariosValidadosConAlfanumericos = new String[5];
+        int contadorUsuarios = 0;
 
         System.out.println("\nValidación de usuarios:");
         System.out.println("Son 5 usuarios.");
-//    do {
-//        if(contadorUsuarios < 4) {
-//            System.out.println("Este es el " + ((contadorUsuarios) + 1) + " usuario.");
-//        } else {
-//            System.out.println("Este es el último usuario a ingresar.");
-//        }
-//        System.out.println("Ingrese el nombre del usuario:");
-//
-//        usuarios[contadorUsuarios] = scanner.nextLine();
-//        contadorUsuarios++;
-//    } while (contadorUsuarios < 5);
+    do {
+        if(contadorUsuarios < 4) {
+            System.out.println("Este es el " + ((contadorUsuarios) + 1) + " usuario.");
+        } else {
+            System.out.println("Este es el último usuario a ingresar.");
+        }
+        System.out.println("Ingrese el nombre del usuario:");
+
+        usuarios[contadorUsuarios] = scanner.nextLine();
+        contadorUsuarios++;
+    } while (contadorUsuarios < 5);
         System.out.println("Los usuarios son: " + formatear(usuarios));
         for (int i = 0; i < usuarios.length; i++) {
             String usuario = usuarios[i];
@@ -70,7 +71,7 @@ public class Parte1EstructurasDeDatosDinamicas_String {
         }
         System.out.println();
         for (int i = 0; i < usuarios.length; i++) {
-            System.out.println("El usuario original es: " + usuarios[i] + "\nRecomendamos: " + usuariosValidados[i] + ".\n");
+            System.out.println("El usuario original es: " + usuarios[i] + "\nRecomendamos: " + usuariosValidados[i] + "\n");
         }
         System.out.println();
         System.out.println("Usuarios validos: " + formatear(usuariosValidados));
@@ -87,14 +88,15 @@ public class Parte1EstructurasDeDatosDinamicas_String {
                 } else {
                     usuariosValidadosConAlfanumericos[i] = usuariosValidados[i] + caracter;
                 }
-
             }
-
         }
+        System.out.println("En caso que tenga un carácter alfanumérico no se harán cambios, pero sugerimos que los tenga para más seguridad.\n");
 
-
-        System.out.println("En caso que tenga un carácter alfanumérico no se harán cambios, pero sugerimos que los tenga para más seguridad.");
-        System.out.println("Quedaría así la lista de usuarios recomendada: " + formatear(usuariosValidadosConAlfanumericos));
+        for (int i = 0; i < usuariosValidadosConAlfanumericos.length; i++) {
+        System.out.println("Al usuario " + usuarios[i]);
+        System.out.println("Le recomendamos que su nombre sea: " + usuariosValidadosConAlfanumericos[i]);
+        System.out.println();
+        }
     }
 
 

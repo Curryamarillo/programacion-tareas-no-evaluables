@@ -1,5 +1,7 @@
+import UD05.Parte1EstructurasDeDatosDinamicas_Matrices;
 import UD05.Parte1EstructurasDeDatosDinamicas_String;
 import UD05.Parte1EstructurasDeDatosDinamicas_Vectores;
+import UD05.pruebas;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,12 +9,17 @@ public class Main {
         /*
         Unidad 5 Primera parte. Estructuras de datos dinámicas.
         */
+        // Matrices
+        // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM1();
+        Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM2();
+
+
         // String
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS1();
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS2();
        //  Parte1EstructurasDeDatosDinamicas_String.EjercicioS3();
        // Parte1EstructurasDeDatosDinamicas_String.EjercicioS4();
-        Parte1EstructurasDeDatosDinamicas_String.EjercicioS5();
+        //Parte1EstructurasDeDatosDinamicas_String.EjercicioS5();
 
 
 
