@@ -2,6 +2,7 @@ package UD05;
 
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -15,6 +16,86 @@ public class Parte1EstructurasDeDatosDinamicas_String {
     c) Para aquellos que no sean válidos, sugiere una versión corregida (elimina espacios, cambia el carácter inicial si es un dígito, recorta o completa longitudes).
     d) Añade una nueva condición: todos los caracteres tienen que ser alfanuméricos. Modifica también el código para añadir sugerencia en caso de no superar esta nueva comprobación.
      */
+    public static void EjercicioS5() {
+        Scanner scanner = new Scanner(System.in);
+//        String[] usuarios = new String[5];
+        String[] usuarios = {"pet", "-Catarate", "paralel-pipedo", "1terratremol", "pa tata"};
+        String[] usuariosValidados = new String[5];
+        String[] usuariosValidadosConAlfanumericos = new String[5];
+
+        System.out.println("\nValidación de usuarios:");
+        System.out.println("Son 5 usuarios.");
+//    do {
+//        if(contadorUsuarios < 4) {
+//            System.out.println("Este es el " + ((contadorUsuarios) + 1) + " usuario.");
+//        } else {
+//            System.out.println("Este es el último usuario a ingresar.");
+//        }
+//        System.out.println("Ingrese el nombre del usuario:");
+//
+//        usuarios[contadorUsuarios] = scanner.nextLine();
+//        contadorUsuarios++;
+//    } while (contadorUsuarios < 5);
+        System.out.println("Los usuarios son: " + formatear(usuarios));
+        for (int i = 0; i < usuarios.length; i++) {
+            String usuario = usuarios[i];
+            boolean empiezaConLetra = usuario.matches("[A-Za-z].*");
+            boolean cantidadDeCaracteres = (usuario.length() >= 5 && usuario.length() <= 12);
+            boolean noContieneEspacios = !usuario.contains(" ");
+
+
+
+
+            if (empiezaConLetra && cantidadDeCaracteres && noContieneEspacios) {
+                System.out.println("El usuario '" + usuario + "' cumple con los criterios de validación");
+                usuariosValidados[i] = usuario;
+            }
+            if (!noContieneEspacios) {
+                usuariosValidados[i] = usuario.replace(" ", "");
+            }
+            if (!empiezaConLetra) {
+                usuariosValidados[i] = usuario.substring(1);
+            }
+            if (!cantidadDeCaracteres) {
+                if (usuario.length() > 12) {
+                    usuario = usuario.substring(0, 12);
+                } else {
+                    int iteraciones = 5 - usuario.length();
+                    for (int j = 0; j < iteraciones; j++) {
+                        usuario = usuario.concat("x");
+                    }
+                }
+                usuariosValidados[i] = usuario;
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < usuarios.length; i++) {
+            System.out.println("El usuario original es: " + usuarios[i] + "\nRecomendamos: " + usuariosValidados[i] + ".\n");
+        }
+        System.out.println();
+        System.out.println("Usuarios validos: " + formatear(usuariosValidados));
+        for (int i = 0; i < usuariosValidados.length; i++) {
+            int maximo = 65; // acaban caracteres alfanuméricos
+            int minimo = 33; // empiezan caracteres alfanuméricos
+            Random aleatorio = new Random();
+            char caracter = (char) (aleatorio.nextInt(maximo - minimo + 1) + minimo);
+            if (usuariosValidados[i].matches(".*[!-@0-9].*")) {
+                usuariosValidadosConAlfanumericos[i] = usuariosValidados[i];
+            } else {
+                if (usuariosValidados[i].length() >= 11) {
+                    usuariosValidadosConAlfanumericos[i] = (usuariosValidados[i].substring(0, usuariosValidados[i].length() - 1)).concat(String.valueOf(caracter));
+                } else {
+                    usuariosValidadosConAlfanumericos[i] = usuariosValidados[i] + caracter;
+                }
+
+            }
+
+        }
+
+
+        System.out.println("En caso que tenga un carácter alfanumérico no se harán cambios, pero sugerimos que los tenga para más seguridad.");
+        System.out.println("Quedaría así la lista de usuarios recomendada: " + formatear(usuariosValidadosConAlfanumericos));
+    }
 
 
     /*
@@ -41,7 +122,9 @@ public class Parte1EstructurasDeDatosDinamicas_String {
             index++;
             contadorCorreosElectronicos -= 1;
         } while (contadorCorreosElectronicos > 0);
+        scanner.close();
         System.out.println("Los correos electrónicos ingresados son: " + Arrays.toString(correosElectronicos).replace("[", "").replace("]", "").toLowerCase());
+
         for (int i = 0; i < correosElectronicos.length; i++) {
             if (correosElectronicos[i].contains("@")) {
                 correosConArroba[i] = correosElectronicos[i];
@@ -54,9 +137,9 @@ public class Parte1EstructurasDeDatosDinamicas_String {
             }
         }
 
-        System.out.println("Los correos que tienen arroba son: "+ formatear(correosConArroba));
-        System.out.println("Los correos que tienen .com son: "+ formatear(correosPuntoCom));
-        System.out.println("Los correos que tienen .es son: "+ formatear(correosConPuntoComPuntoEs));
+        System.out.println("Los correos que tienen arroba son: " + formatear(correosConArroba));
+        System.out.println("Los correos que tienen .com son: " + formatear(correosPuntoCom));
+        System.out.println("Los correos que tienen .es son: " + formatear(correosConPuntoComPuntoEs));
         for (String correo : correosElectronicos) {
             if (correo.contains(".")) {
                 String dominio = correo.substring(correo.indexOf("."));

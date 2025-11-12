@@ -11,7 +11,8 @@ public class Main {
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS1();
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS2();
        //  Parte1EstructurasDeDatosDinamicas_String.EjercicioS3();
-        Parte1EstructurasDeDatosDinamicas_String.EjercicioS4();
+       // Parte1EstructurasDeDatosDinamicas_String.EjercicioS4();
+        Parte1EstructurasDeDatosDinamicas_String.EjercicioS5();
 
 
 
