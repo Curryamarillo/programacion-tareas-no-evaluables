@@ -1,7 +1,4 @@
 import UD05.Parte1EstructurasDeDatosDinamicas_Matrices;
-import UD05.Parte1EstructurasDeDatosDinamicas_String;
-import UD05.Parte1EstructurasDeDatosDinamicas_Vectores;
-import UD05.pruebas;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,16 +8,16 @@ public class Main {
         */
         // Matrices
         // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM1();
-        Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM2();
-
-
+        // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM2();
+        // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM3();
+        // Parte1EstructurasDeDatosDinamicas_Matrices.ejercicioM4();
+        Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM5();
         // String
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS1();
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS2();
-       //  Parte1EstructurasDeDatosDinamicas_String.EjercicioS3();
-       // Parte1EstructurasDeDatosDinamicas_String.EjercicioS4();
+        //  Parte1EstructurasDeDatosDinamicas_String.EjercicioS3();
+        // Parte1EstructurasDeDatosDinamicas_String.EjercicioS4();
         //Parte1EstructurasDeDatosDinamicas_String.EjercicioS5();
-
 
 
         // Vectores
