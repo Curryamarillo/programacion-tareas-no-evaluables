@@ -1,17 +1,24 @@
 import UD05.Parte1EstructurasDeDatosDinamicas_Matrices;
+import UD05.Parte2EstructurasDeDatosDinamicas;
 
 public class Main {
     public static void main(String[] args) {
 
+
+
         /*
         Unidad 5 Primera parte. Estructuras de datos dinámicas.
         */
+
+        // Parte 2
+        Parte2EstructurasDeDatosDinamicas.hashmapPractica();
+
         // Matrices
         // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM1();
         // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM2();
         // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM3();
         // Parte1EstructurasDeDatosDinamicas_Matrices.ejercicioM4();
-        Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM5();
+        // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM5();
         // String
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS1();
         // Parte1EstructurasDeDatosDinamicas_String.EjercicioS2();
