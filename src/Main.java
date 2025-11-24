@@ -1,8 +1,8 @@
-import UD05.Parte1EstructurasDeDatosDinamicas_Matrices;
-import UD05.Parte2EstructurasDeDatosDinamicas;
+import UD05.Parte2EstructurasDeDatosDinamicas_ArrayList;
+import UD05.Parte2EstructurasDeDatosDinamicas_HashMap;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
 
@@ -11,7 +11,18 @@ public class Main {
         */
 
         // Parte 2
-        Parte2EstructurasDeDatosDinamicas.hashmapPractica();
+
+        // ArrayList
+        // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL1();
+        Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL2();
+
+        // HashMap
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH1();
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH2();
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH3();
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH4();
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH5();
+        // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH6();
 
         // Matrices
         // Parte1EstructurasDeDatosDinamicas_Matrices.EjercicioM1();
