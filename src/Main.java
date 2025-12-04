@@ -1,20 +1,30 @@
 import UD05.Parte2EstructurasDeDatosDinamicas_ArrayList;
 import UD05.Parte2EstructurasDeDatosDinamicas_HashMap;
+import UD06.FuncionesEjercicioF1;
+import UD06.FuncionesEjercicioF2;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 
-
+        /*
+        Unidad 6. Funciones
+        */
+        // FuncionesEjercicioF1.creaSumaMediaMaxVector();
+        FuncionesEjercicioF2.lectorDeFrases();
         /*
         Unidad 5 Primera parte. Estructuras de datos dinámicas.
         */
+
 
         // Parte 2
 
         // ArrayList
         // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL1();
-        Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL2();
+        // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL2();
+        // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL3();
+        // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL4();
+        // Parte2EstructurasDeDatosDinamicas_ArrayList.EjercicioL5();
 
         // HashMap
         // Parte2EstructurasDeDatosDinamicas_HashMap.EjercicioH1();
