@@ -14,6 +14,10 @@ public class Main {
         */
         // FuncionesEjercicioF1.creaSumaMediaMaxVector();
         // FuncionesEjercicioF2.lectorDeFrases();
+        // FuncionesEjercicioF3.gestorCadenas();
+        /*
+        Unidad 5 Primera parte. Estructuras de datos dinámicas.
+        // FuncionesEjercicioF2.lectorDeFrases();
     	// FuncionesEjercicioF3.ejercicioF3();
     	 FuncionesEjercicioF4.calculadora();
        /*
