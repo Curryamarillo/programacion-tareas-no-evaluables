@@ -35,9 +35,13 @@ public class FuncionesEjercicioF2 {
         return temp.length();
     }
     private static int contadorEspacios(String cadenaTexto) {
-        int longitudInicial = cadenaTexto.length();
-        String cadenaSinEspacios = cadenaTexto.replaceAll("^\\S", "");
-        return  longitudInicial - cadenaSinEspacios.length();
+        int contador = 0;
+        for (char c: cadenaTexto.toCharArray()) {
+            if (c == ' ') {
+                contador++;
+            }
+        }
+        return contador;
     }
 
 }
