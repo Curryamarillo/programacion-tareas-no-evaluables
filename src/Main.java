@@ -1,9 +1,6 @@
 import UD05.Parte2EstructurasDeDatosDinamicas_ArrayList;
 import UD05.Parte2EstructurasDeDatosDinamicas_HashMap;
-import UD06.FuncionesEjercicioF1;
-import UD06.FuncionesEjercicioF2;
-import UD06.FuncionesEjercicioF3;
-import UD06.FuncionesEjercicioF4;
+import UD06.*;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -14,12 +11,13 @@ public class Main {
         */
         // FuncionesEjercicioF1.creaSumaMediaMaxVector();
         // FuncionesEjercicioF2.lectorDeFrases();
-        // FuncionesEjercicioF3.gestorCadenas();
+        // FuncionesEjercicioF3.ejercicioF3();
+        //FuncionesEjercicioF4.calculadora();
+        FuncionesEjercicioF5.sistemaDeAsistencia();
         /*
         Unidad 5 Primera parte. Estructuras de datos dinámicas.
-        // FuncionesEjercicioF2.lectorDeFrases();
-    	// FuncionesEjercicioF3.ejercicioF3();
-    	 FuncionesEjercicioF4.calculadora();
+
+
        /*
     	 Unidad 5 Primera parte. Estructuras de datos dinámicas.
         */
